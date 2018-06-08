@@ -16,6 +16,27 @@ The ajaxi framework is used to automate basic ajax calls. Forms, classes and dat
 
 ## Example
 
+```html
+<form action="/ajaxi.html" method="GET" class="ajaxi" data-trigger="submit">
+	<input type="hidden" name="id" value="123">
+	<input type="text" name="search" placeholder="e.g. Cats">
+	<input type="submit" value="Search">
+</form>
+
+<select name="search" class="ajaxi" data-trigger="change" data-action="/ajaxi.html">
+	<option value="">Search a category</option>
+	<option value="cats">Cats</option>
+	<option value="dogs">Dogs</option>
+	<option value="birds">Birds</option>
+</select>
+
+<button class="ajaxi" data-trigger="click" data-action="/ajaxi.html">
+	<input type="hidden" name="id" value="123">
+	<input type="hidden" name="search" value="cats">
+	Search Cats
+</button>
+```
+
 ## Usage
 
 Ajaxi utilizes a few classes to handle the heavy lifting:
