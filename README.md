@@ -1,6 +1,15 @@
 # ajaxi
 jQuery AJAX framework inspired by bootstrap's html attribute triggers
 
+* [How it works](#how-it-works)
+* [Example](#example)
+* [Usage](#usage)
+	* [Via data attributes](#via-data-attributes)
+	* [Via JavaScript](#via-javascript)
+	* [Options](#options)
+	* [Methods](#methods)
+	* [Events](#events)
+
 ## How it works
 
 The ajaxi framework is used to automate basic ajax calls. Forms, classes and data attributes are used to configure requests and responses.
@@ -56,10 +65,10 @@ collapsed.feedback.ajaxi | this event is fired after the feedback element is fin
 
 ```javascript
 $('#my-ajax-form').on('success.ajaxi', function() {
-	// do something...
+    // do something...
 });
 
 $('#my-feedback').on('expanded.feedback.ajaxi', function() {
-	// do something...
+    // do something...
 });
 ```
