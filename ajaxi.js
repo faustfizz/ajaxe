@@ -22,7 +22,7 @@ jQuery(function($) {
 			'url': action,
 			'data': form,
 			'method': method,
-			'dataType': 'json',
+			'dataType': self.data('type') || 'json',
 			'success': function(data, statusText, jqXHR) {
 				if (self.data('feedback') && 'systemMessages' in data) {
 					var feedback = $(self.data('feedback'));
