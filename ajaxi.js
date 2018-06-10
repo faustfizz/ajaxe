@@ -24,9 +24,9 @@ jQuery(function($) {
 			'method': method,
 			'dataType': self.data('type') || 'json',
 			'success': function(data, statusText, jqXHR) {
-				if (self.data('feedback') && 'systemMessages' in data) {
+				if (self.data('feedback') && 'feedback' in data) {
 					var feedback = $(self.data('feedback'));
-					feedback.html(data.systemMessages);
+					feedback.html(data.feedback);
 
 					if (self.data('animation') != 0) {
 						feedback.trigger('expand.feedback.ajaxi');
@@ -52,8 +52,8 @@ jQuery(function($) {
 					}
 				}
 
-				if (self.data('content') && 'htmlContent' in data) {
-					$(self.data('content')).html(data.htmlContent);
+				if (self.data('content') && 'content' in data) {
+					$(self.data('content')).html(data.content);
 				}
 
 				if (data.status == 'success') {
