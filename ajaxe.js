@@ -1,12 +1,4 @@
 (function ($) {
-	$.fn.ajaxe.defaults = {
-		action: windown.location.href,
-		animation: 400,
-		method: 'post',
-		timeout: 10000,
-		type: 'json',
-	};
-
 	$.fn.ajaxe = function(options) {
 		var command = false;
 
@@ -27,6 +19,14 @@
 				self.on(opts.trigger, ajaxe, opts);
 			}
 		});
+	};
+
+	$.fn.ajaxe.defaults = {
+		action: window.location.href,
+		animation: 400,
+		method: 'post',
+		timeout: 10000,
+		type: 'json',
 	};
 
 	jQuery(function($) {

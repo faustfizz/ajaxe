@@ -17,20 +17,20 @@ The ajaxe framework is used to automate basic ajax calls. Forms, classes and dat
 ## Example
 
 ```html
-<form action="/ajaxe.html" method="GET" class="ajaxe" data-trigger="submit">
+<form action="/search.php" method="GET" class="ajaxe" data-trigger="submit">
     <input type="hidden" name="id" value="123">
     <input type="text" name="search" placeholder="e.g. Cats">
     <input type="submit" value="Search">
 </form>
 
-<select name="search" class="ajaxe" data-trigger="change" data-action="/ajaxe.html">
+<select name="search" class="ajaxe" data-trigger="change" data-action="/search.php">
     <option value="">Search a category</option>
     <option value="cats">Cats</option>
     <option value="dogs">Dogs</option>
     <option value="birds">Birds</option>
 </select>
 
-<button class="ajaxe" data-trigger="click" data-action="/ajaxe.html">
+<button class="ajaxe" data-trigger="click" data-action="/search.php">
     <input type="hidden" name="id" value="123">
     <input type="hidden" name="search" value="cats">
     Search Cats
